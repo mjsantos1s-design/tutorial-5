@@ -145,7 +145,13 @@ body > footer {
 
 /* Pulldown Menu Styles */
 
+ul.submenu {
+   display: none;
+}
 
+a.submenuTitle:hover+ul.submenu, ul.submenu:hover {
+   display: block;
+}
 
 
 /* New Styles Added Below */
@@ -155,7 +161,14 @@ body > footer {
    ================================
 */
 @media only screen and (max-width: 480px) {
+   nav.horizontal a {
+   font-size: 1.5em;
+   line-height: 2.2em;
+   }
 
+   aside {
+      display: none;
+   }
 }
    
 /* =================================
@@ -163,7 +176,13 @@ body > footer {
    =================================
 */
 @media only screen and (min-width: 481px) {
-   
+ul.mainmenu > li {
+   float: left;
+   width: 20%;
+}
+ul.submenu {
+   width:200%;
+}
 }
 
 /* =================================
@@ -171,5 +190,32 @@ body > footer {
    =================================
 */
 @media only screen and (min-width: 769px) {
-   
+   ul.submenu {
+      background: transparent;
+      box-shadow: none;
+      display: block;
+      position: relative;
+      width: 100%;
+   }
+
+   nav.horizontal::after {
+      clear: both;
+      content: "";
+      display: table;
+   }
+
+   nav.horizontal a.submenuTitle {
+      display: none;
+   }
+
+   article {
+      float: left;
+      margin-right: 5%;
+      width: 55%;
+   }
+
+   aside {
+      float: left;
+      width: 40%;
+   }
 }
