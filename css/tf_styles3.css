@@ -283,7 +283,7 @@ body > section#main {
    /* HTML and Body Styles */
    
    html {
-      background: url(tf_back1.png) center center / cover no-repeat fixed;
+      background: url(../png/tf_back1.png) center center / cover no-repeat fixed;
    }
    
    body {
